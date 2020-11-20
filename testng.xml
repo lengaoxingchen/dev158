@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/v_lujichao/IdeaProjects/dev158/src/test/java/com/example/testng/FirstClassTest.java">
+        <classes>
+                <class name="com.example.testng.FirstClassTest">
+                </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/v_lujichao/IdeaProjects/dev158/src/test/java/com/example/testng/LoginTest.java">
+        <classes>
+            <class name="com.example.testng.LoginTest">
+                <methods>
+                    <include name="testLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/v_lujichao/IdeaProjects/dev158/src/test/java/com/example/testng/PriorityTest.java">
+        <classes>
+            <class name="com.example.testng.PriorityTest">
+                <methods>
+                    <include name="testCase."/>
+                    <exclude name="testCase4"/>
+                    <exclude name="testCase6"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
