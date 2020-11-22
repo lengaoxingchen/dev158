@@ -1,7 +1,7 @@
 package com.example.servlet;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 public class CalculatorForPpiTest {
 
@@ -9,7 +9,7 @@ public class CalculatorForPpiTest {
     public static int height;
     public static double size;
 
-    @BeforeAll
+    @BeforeClass
     static void init() {
         width = 750;
         height = 1334;
@@ -18,37 +18,37 @@ public class CalculatorForPpiTest {
 
     @Test
     public void testCase1() {
-        Assertions.assertEquals(-1, CalculatorForPpi.calculate(width, height, size));
+        Assert.assertEquals(-1, CalculatorForPpi.calculate(width, height, size));
     }
 
     @Test
     public void testCase2() {
-        Assertions.assertEquals(-1, CalculatorForPpi.calculate(-1, height, size));
+        Assert.assertEquals(-1, CalculatorForPpi.calculate(-1, height, size));
     }
 
     @Test
     public void testCase3() {
-        Assertions.assertEquals(-1, CalculatorForPpi.calculate(0, height, size));
+        Assert.assertEquals(-1, CalculatorForPpi.calculate(0, height, size));
     }
 
     @Test
     public void testCase4() {
-        Assertions.assertEquals(-1, CalculatorForPpi.calculate(width, -1, size));
+        Assert.assertEquals(-1, CalculatorForPpi.calculate(width, -1, size));
     }
 
     @Test
     public void testCase5() {
-        Assertions.assertEquals(-1, CalculatorForPpi.calculate(width, 0, size));
+        Assert.assertEquals(-1, CalculatorForPpi.calculate(width, 0, size));
     }
 
     @Test
     public void testCase6() {
-        Assertions.assertEquals(-1, CalculatorForPpi.calculate(width, height, -1));
+        Assert.assertEquals(-1, CalculatorForPpi.calculate(width, height, -1));
     }
 
     @Test
     public void testCase7() {
-        Assertions.assertEquals(-1, CalculatorForPpi.calculate(width, height, 0));
+        Assert.assertEquals(-1, CalculatorForPpi.calculate(width, height, 0));
     }
 
 }
